@@ -7,5 +7,10 @@
     <color name="blue_main_theme">#4285f4</color>
     <!--基本文本颜色-->
     <color name="gray_20">#333333</color>
+    <color name="gray_40">#666666</color>
+    <color name="gray_60">#999999</color>
+    <color name="gray_80">#cccccc</color>
+    <color name="gray_95">#f2f2f2</color>
+    <color name="gray_90">#e5e5e5</color>
     <color name="white">#ffffffff</color>
 </resources>

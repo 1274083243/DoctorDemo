@@ -50,4 +50,5 @@ public abstract class BaseFragment extends Fragment{
      * @return
      */
     public abstract View getLayoutView();
+
 }
