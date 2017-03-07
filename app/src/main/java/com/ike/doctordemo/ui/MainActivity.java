@@ -1,9 +1,10 @@
-package com.ike.doctordemo;
+package com.ike.doctordemo.ui;
 
 import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.widget.Toast;
 
+import com.ike.doctordemo.R;
 import com.ike.doctordemo.base.BaseActivtiy;
 import com.ike.doctordemo.fragment.HomeFragment;
 import com.ike.doctordemo.widget.appBottomBarLayout.AppBottomBarLayout;
@@ -13,7 +14,6 @@ import butterknife.Bind;
 
 
 public class MainActivity extends BaseActivtiy {
-
     @Bind(R.id.bottom_layout)
     AppBottomBarLayout bottomLayout;
     private FragmentManager fragmentManager;
@@ -32,7 +32,7 @@ public class MainActivity extends BaseActivtiy {
         initBottomBarLayout();
         fragmentManager = getSupportFragmentManager();
         homeFragment=new HomeFragment();
-        fragmentManager.beginTransaction().add(R.id.content_container,homeFragment).commit();
+        fragmentManager.beginTransaction().add(R.id.main_content_container,homeFragment).commit();
     }
     @Override
     public void initListener() {

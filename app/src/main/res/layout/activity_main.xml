@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:fitsSystemWindows="true"
-    android:clipToPadding="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
    <FrameLayout
-       android:id="@+id/content_container"
+       android:id="@+id/main_content_container"
        android:layout_width="match_parent"
        android:layout_height="match_parent"
        android:layout_above="@+id/bottom_layout"
        />
    <com.ike.doctordemo.widget.appBottomBarLayout.AppBottomBarLayout
        android:background="#ffffff"
-       android:gravity="bottom"
        android:orientation="horizontal"
        android:id="@+id/bottom_layout"
        android:layout_width="match_parent"

@@ -29,20 +29,21 @@ public abstract class BaseFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view=getLayoutView();
-
         return view;
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
         ButterKnife.bind(this,view);
+        initData();
+        initListener();
+        super.onViewCreated(view, savedInstanceState);
     }
 
     @Override
     public void onDestroyView() {
-        super.onDestroyView();
         ButterKnife.unbind(this);
+        super.onDestroyView();
     }
 
     /**
@@ -50,5 +51,7 @@ public abstract class BaseFragment extends Fragment{
      * @return
      */
     public abstract View getLayoutView();
+    public abstract void initData();
+    public abstract void initListener();
 
 }

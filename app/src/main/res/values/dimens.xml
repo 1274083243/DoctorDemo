@@ -8,4 +8,5 @@
     <dimen name="text_size_medium">14sp</dimen>
     <!--导航栏的高度-->
     <dimen name="height_title_bar">46dp</dimen>
+    <dimen name="text_size_xlarge">20sp</dimen>
 </resources>

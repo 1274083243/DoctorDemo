@@ -7,7 +7,6 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.ike.commonutils.commonUtils.StatusBarCompat;
 import com.ike.commonutils.commonUtils.StatusBarUtil;
 import com.ike.doctordemo.R;
 
