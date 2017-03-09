@@ -55,8 +55,7 @@ public class HomeFragment extends BaseFragment {
         loopModels.add(new LoopModel(R.drawable.icon_main_addmiss+"","第一页"));
         loopModels.add(new LoopModel(R.drawable.icon_main_apply+"","第二页"));
         looperViewPager.getBuilder()
-                .setAllowAutoLoop(true)
-                .setLooperTime(2000)
+                .setAllowAutoLoop(true,2000)
                 .build(loopModels);
         adapter.addHeadView(headView);
         rlMain.setAdapter(adapter);

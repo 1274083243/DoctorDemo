@@ -90,23 +90,16 @@ public class LooperViewPager extends RelativeLayout{
         }
     }
     public static class Builder{
-        /**
-         * 设置轮训时间
-         * @param looperTime
-         * @return
-         */
-        public Builder setLooperTime(int looperTime){
-            TIME_INTERVAL=looperTime;
-            return Builder.this;
-        }
+
 
         /**
          * 设置是否允许自动轮训
-         * @param allowAutoLoop
+         * @param allowAutoLoop:是否允许自动轮询,looperTime轮轮询间隔时间
          * @return
          */
-        public Builder setAllowAutoLoop(boolean allowAutoLoop){
+        public Builder setAllowAutoLoop(boolean allowAutoLoop,int looperTime){
             AUTO_LOOP=allowAutoLoop;
+            TIME_INTERVAL=looperTime;
             return this;
         }
         public Builder build(List<LoopModel> models){
