@@ -8,6 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.ike.doctordemo.base.baseMvp.BaseFragmentView;
+import com.ike.doctordemo.base.baseMvp.BasePresenter;
+import com.ike.doctordemo.base.baseMvp.BaseView;
+
 import butterknife.ButterKnife;
 
 /**
@@ -16,9 +20,10 @@ import butterknife.ButterKnife;
 功能描述：fragment的基类
 **/
 
-public abstract class BaseFragment extends Fragment{
+public abstract class BaseFragment<P extends BasePresenter<V>,V extends BaseFragmentView> extends Fragment implements BaseFragmentView{
     protected Activity mContext;
     protected String Tag;
+    protected P mPresenter;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,14 +40,18 @@ public abstract class BaseFragment extends Fragment{
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         ButterKnife.bind(this,view);
+        mPresenter=initPresenter();
+        mPresenter.attachView((V) this);
         initData();
         initListener();
+
         super.onViewCreated(view, savedInstanceState);
     }
 
     @Override
     public void onDestroyView() {
         ButterKnife.unbind(this);
+        mPresenter.detachView();
         super.onDestroyView();
     }
 
@@ -54,4 +63,9 @@ public abstract class BaseFragment extends Fragment{
     public abstract void initData();
     public abstract void initListener();
 
+    /**
+     * 初始化代理者
+     * @return
+     */
+    public abstract P initPresenter();
 }

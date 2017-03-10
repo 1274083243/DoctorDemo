@@ -6,6 +6,7 @@ import android.widget.Toast;
 
 import com.ike.doctordemo.R;
 import com.ike.doctordemo.base.BaseActivtiy;
+import com.ike.doctordemo.base.baseMvp.Presenter;
 import com.ike.doctordemo.fragment.HomeFragment;
 import com.ike.doctordemo.widget.appBottomBarLayout.AppBottomBarLayout;
 import com.ike.doctordemo.widget.appBottomBarLayout.BottomBarItem;
@@ -38,6 +39,12 @@ public class MainActivity extends BaseActivtiy {
     public void initListener() {
 
     }
+
+    @Override
+    public Presenter initPresenter() {
+        return null;
+    }
+
     /**
      * 初始化底部导航栏
      */

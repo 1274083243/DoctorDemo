@@ -12,6 +12,7 @@ import com.ike.commonutils.recycleViewUtils.SpaceItemDecoration;
 import com.ike.doctordemo.R;
 import com.ike.doctordemo.adapter.HomeMainAdapter;
 import com.ike.doctordemo.base.BaseFragment;
+import com.ike.doctordemo.base.baseMvp.BasePresenter;
 import com.ike.doctordemo.model.HomeItem;
 
 import java.util.ArrayList;
@@ -66,5 +67,19 @@ public class HomeFragment extends BaseFragment {
 
     }
 
+    @Override
+    public BasePresenter initPresenter() {
+        return null;
+    }
 
+
+    @Override
+    public void OnReFresh(Object o) {
+
+    }
+
+    @Override
+    public void OnLoadMore(Object o) {
+
+    }
 }

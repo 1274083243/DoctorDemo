@@ -9,6 +9,9 @@ import android.widget.TextView;
 
 import com.ike.commonutils.commonUtils.StatusBarUtil;
 import com.ike.doctordemo.R;
+import com.ike.doctordemo.base.baseMvp.BaseActivityView;
+import com.ike.doctordemo.base.baseMvp.BaseView;
+import com.ike.doctordemo.base.baseMvp.Presenter;
 
 import butterknife.ButterKnife;
 /**
@@ -16,9 +19,10 @@ import butterknife.ButterKnife;
 时间：2017/3/6 9:35
 功能描述：所有Activity的基类
 **/
-public abstract class BaseActivtiy extends AppCompatActivity{
+public abstract class BaseActivtiy<P extends Presenter<V>,V extends BaseActivityView> extends AppCompatActivity implements BaseActivityView{
     protected String Tag;//日志打印字符串
     protected View baseTitleView;//通用头部导航栏布局
+    protected P mPresenter;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,9 +30,12 @@ public abstract class BaseActivtiy extends AppCompatActivity{
         setContentView(initBaseView());
         ButterKnife.bind(this);
         initTitleBarColor();
+        mPresenter=initPresenter();
+        mPresenter.attachView((V) this);
         initView();
         initListener();
         initData();
+
     }
     /**
      * 获取页面显示布局
@@ -48,6 +55,7 @@ public abstract class BaseActivtiy extends AppCompatActivity{
      * 初始化事件监听
      */
     public abstract void initListener();
+    public abstract P initPresenter();
 
     /**
      * 初始化数据：如联网请求数据等
@@ -63,6 +71,7 @@ public abstract class BaseActivtiy extends AppCompatActivity{
     protected void onDestroy() {
         super.onDestroy();
         ButterKnife.unbind(this);
+        mPresenter.detachView();
     }
     protected LinearLayout btn_left;//左边的返回键
     protected TextView tv_title_name;//界面名称
@@ -81,4 +90,5 @@ public abstract class BaseActivtiy extends AppCompatActivity{
         content_container.addView(content_view);
         return baseView;
     }
+
 }
