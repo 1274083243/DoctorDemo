@@ -1,17 +1,15 @@
-package com.ike.doctordemo.widget.appBottomBarLayout;
+package com.ike.commonutils.widget.appBottomBarLayout;
 
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.ike.doctordemo.R;
+import com.ike.commonutils.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -123,7 +121,7 @@ public class AppBottomBarLayout extends LinearLayout implements View.OnClickList
                 ((ImageView) item.getView(R.id.iv_bar_icon)).setImageResource(item.selectedIcon);
             }else {
                 ((ImageView) item.getView(R.id.iv_bar_icon)).setImageResource(item.normalIcon);
-                ((TextView)item.getView(R.id.tv_bar_name)).setTextColor(getResources().getColor(R.color.gray_20));
+                ((TextView)item.getView(R.id.tv_bar_name)).setTextColor(getResources().getColor(R.color.colorAccent));
             }
         }
     }

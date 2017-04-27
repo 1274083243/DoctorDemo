@@ -1,4 +1,4 @@
-package com.ike.doctordemo.widget.appBottomBarLayout;
+package com.ike.commonutils.widget.appBottomBarLayout;
 
 import android.support.v4.util.SparseArrayCompat;
 import android.view.View;

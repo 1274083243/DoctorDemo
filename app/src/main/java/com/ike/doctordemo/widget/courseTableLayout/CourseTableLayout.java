@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.ike.commonutils.commonUtils.DpPxUtils;
 import com.ike.commonutils.widget.widgetUtils.recyclerViewUtils.SpaceItemDecoration;
 import com.ike.commonutils.widget.widgetUtils.recyclerViewUtils.ViewHolder;
 import com.ike.doctordemo.R;
@@ -51,7 +52,7 @@ public class CourseTableLayout extends LinearLayout {
     private void init() {
         //初始化课程表上端的日期控件：同来标注星期与日期
         dateLayout = new LinearLayout(getContext());
-        LinearLayout.LayoutParams dataLayoutParam = new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, DensityUtil.dip2px(getContext(),30));
+        LinearLayout.LayoutParams dataLayoutParam = new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, DpPxUtils.dip2px(30,getContext()));
         dateLayout.setLayoutParams(dataLayoutParam);
         addView(dateLayout,0);
         //初始化课程表下端的课程信息容器

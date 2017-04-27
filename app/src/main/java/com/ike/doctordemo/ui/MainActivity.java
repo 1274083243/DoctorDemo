@@ -8,8 +8,8 @@ import com.ike.doctordemo.R;
 import com.ike.doctordemo.base.BaseActivtiy;
 import com.ike.doctordemo.base.baseMvp.Presenter;
 import com.ike.doctordemo.fragment.HomeFragment;
-import com.ike.doctordemo.widget.appBottomBarLayout.AppBottomBarLayout;
-import com.ike.doctordemo.widget.appBottomBarLayout.BottomBarItem;
+import com.ike.commonutils.widget.appBottomBarLayout.AppBottomBarLayout;
+import com.ike.commonutils.widget.appBottomBarLayout.BottomBarItem;
 
 import butterknife.Bind;
 

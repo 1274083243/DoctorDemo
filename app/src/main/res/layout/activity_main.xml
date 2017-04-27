@@ -10,7 +10,7 @@
        android:layout_height="match_parent"
        android:layout_above="@+id/bottom_layout"
        />
-   <com.ike.doctordemo.widget.appBottomBarLayout.AppBottomBarLayout
+   <com.ike.commonutils.widget.appBottomBarLayout.AppBottomBarLayout
        android:background="#ffffff"
        android:orientation="horizontal"
        android:id="@+id/bottom_layout"
