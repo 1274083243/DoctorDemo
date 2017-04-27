@@ -12,8 +12,7 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.ike.commonutils.R;
-import com.ike.commonutils.commonUtils.DensityUtil;
+import com.ike.commonutils.commonUtils.DpPxUtils;
 
 import java.util.List;
 
@@ -78,7 +77,7 @@ public class DropMenuLayout extends LinearLayout implements View.OnClickListener
     private void addTabs(String tab_lable,int i){
         TextView tv_tab=new TextView(mContext);
         tv_tab.setId(i);
-        LayoutParams tabLayoutParams = new LayoutParams(0, DensityUtil.dip2px(mContext,30),1.0f);
+        LayoutParams tabLayoutParams = new LayoutParams(0, DpPxUtils.dip2px(30,mContext),1.0f);
         tv_tab.setLayoutParams(tabLayoutParams);
         tv_tab.setGravity(Gravity.CENTER);
         tv_tab.setTextSize(TypedValue.COMPLEX_UNIT_SP,16);
@@ -112,7 +111,7 @@ public class DropMenuLayout extends LinearLayout implements View.OnClickListener
         contentLayout.addView(maskView,0);
         //添加弹窗内容
         mPopuView=new FrameLayout(mContext);
-        FrameLayout.LayoutParams param1=new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,  DensityUtil.dip2px(mContext,250));
+        FrameLayout.LayoutParams param1=new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,  DpPxUtils.dip2px(250,mContext));
 
         mPopuView.setLayoutParams(param1);
         mPopuView.setVisibility(GONE);

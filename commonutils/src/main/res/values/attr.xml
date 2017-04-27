@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--轮播图相关自定义属性-->
+    <declare-styleable name="LooperViewPager">
+        <attr name="select_icon" format="reference"/>
+        <attr name="unselect_icon" format="reference"/>
+        <attr name="auto_loop" format="boolean"/>
+        <attr name="loop_time" format="integer"/>
+    </declare-styleable>
+</resources>

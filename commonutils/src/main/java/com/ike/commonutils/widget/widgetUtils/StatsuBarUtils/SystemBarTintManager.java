@@ -1,4 +1,4 @@
-package com.ike.commonutils.widget;
+package com.ike.commonutils.widget.widgetUtils.StatsuBarUtils;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;

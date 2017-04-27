@@ -1,11 +1,7 @@
 package com.ike.doctordemo.adapter;
 
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
-
-import com.ike.commonutils.recycleViewUtils.CommonAdapter;
-import com.ike.commonutils.recycleViewUtils.ViewHolder;
+import com.ike.commonutils.widget.widgetUtils.recyclerViewUtils.CommonAdapter;
+import com.ike.commonutils.widget.widgetUtils.recyclerViewUtils.ViewHolder;
 import com.ike.doctordemo.DoctorApplication;
 import com.ike.doctordemo.R;
 

@@ -1,4 +1,4 @@
-package com.ike.commonutils.commonUtils;
+package com.ike.commonutils.widget.widgetUtils.StatsuBarUtils;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -7,8 +7,6 @@ import android.os.Build;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-
-import com.ike.commonutils.widget.SystemBarTintManager;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;

@@ -13,11 +13,9 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.ike.commonutils.commonUtils.DensityUtil;
-import com.ike.commonutils.recycleViewUtils.SpaceItemDecoration;
-import com.ike.commonutils.recycleViewUtils.ViewHolder;
+import com.ike.commonutils.widget.widgetUtils.recyclerViewUtils.SpaceItemDecoration;
+import com.ike.commonutils.widget.widgetUtils.recyclerViewUtils.ViewHolder;
 import com.ike.doctordemo.R;
-import com.ike.doctordemo.model.HomeItem;
 
 import java.util.List;
 

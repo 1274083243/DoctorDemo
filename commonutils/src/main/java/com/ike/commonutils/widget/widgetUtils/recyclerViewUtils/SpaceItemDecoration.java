@@ -1,4 +1,4 @@
-package com.ike.commonutils.recycleViewUtils;
+package com.ike.commonutils.widget.widgetUtils.recyclerViewUtils;
 
 import android.graphics.Rect;
 import android.support.v7.widget.RecyclerView;

@@ -6,9 +6,9 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.ike.commonutils.widget.loopViewpager.LoopModel;
-import com.ike.commonutils.recycleViewUtils.HeadAndFootWrapper;
+import com.ike.commonutils.widget.widgetUtils.recyclerViewUtils.HeadAndFootWrapper;
 import com.ike.commonutils.widget.loopViewpager.LooperViewPager;
-import com.ike.commonutils.recycleViewUtils.SpaceItemDecoration;
+import com.ike.commonutils.widget.widgetUtils.recyclerViewUtils.SpaceItemDecoration;
 import com.ike.doctordemo.R;
 import com.ike.doctordemo.adapter.HomeMainAdapter;
 import com.ike.doctordemo.base.BaseFragment;

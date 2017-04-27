@@ -7,10 +7,9 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.ike.commonutils.commonUtils.StatusBarUtil;
+import com.ike.commonutils.widget.widgetUtils.StatsuBarUtils.StatusBarUtil;
 import com.ike.doctordemo.R;
 import com.ike.doctordemo.base.baseMvp.BaseActivityView;
-import com.ike.doctordemo.base.baseMvp.BaseView;
 import com.ike.doctordemo.base.baseMvp.Presenter;
 
 import butterknife.ButterKnife;
