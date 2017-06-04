@@ -108,6 +108,7 @@ public class LooperViewPager extends RelativeLayout{
      * 添加指示的下标
      */
     private static void addPointToContainer(){
+        point_container.removeAllViews();
         int size=mModels.size();
         for (int i=0;i<size;i++){
             ImageView imageView=new ImageView(context);
@@ -294,19 +295,20 @@ public class LooperViewPager extends RelativeLayout{
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent event) {
-        gestureDetectorCompat.onTouchEvent(event);
-        if (mTask!=null){
-            switch (event.getAction()) {
-                //手指按下
-                case MotionEvent.ACTION_DOWN:
-                    mTask.stopLoop();
-                    break;
-                case MotionEvent.ACTION_CANCEL:
-                case MotionEvent.ACTION_UP:
-                    mTask.startLoop();
+        if (mModels!=null&&mModels.size()>0){
+            gestureDetectorCompat.onTouchEvent(event);
+            if (mTask!=null){
+                switch (event.getAction()) {
+                    //手指按下
+                    case MotionEvent.ACTION_DOWN:
+                        mTask.stopLoop();
+                        break;
+                    case MotionEvent.ACTION_CANCEL:
+                    case MotionEvent.ACTION_UP:
+                        mTask.startLoop();
+                }
             }
         }
-
         return super.dispatchTouchEvent(event);
     }
 }
